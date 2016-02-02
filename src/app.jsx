@@ -4,14 +4,18 @@ var ReactRouter = require('react-router');  //React Router to define routes
 var HashHistory = require('react-router/lib/hashHistory'); //maintain logs or history of page where route is currently on
 var Router = ReactRouter.Router;   //Router deciding which content to show on page
 var Route = ReactRouter.Route;   //Object to configure the route
+var Link = ReactRouter.Link
 
 
 var Hello = React.createClass({
   render: function() {
-    return <h1 className="red">
+    return <div className="red">    	
+    	<Link to="/">Home </Link>
+    	<Link to="1">Child1 </Link>
+    	<Link to="2">Child2 </Link>
     	<h1> Working Fine </h1>
       {this.props.children}
-    </h1>
+    </div>
   }
 });
 
